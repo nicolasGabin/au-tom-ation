@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#checkboxes input:nth-of-type(2)"
-}
