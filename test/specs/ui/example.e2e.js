@@ -1,9 +1,9 @@
-const LoginPage = require("../pageobjects/login.page");
-const SecurePage = require("../pageobjects/secure.page");
-const CheckboxPage = require("../pageobjects/checkboxes.page");
-const DropdownPage = require("../pageobjects/dropdown.page");
-const DynamicPage = require("../pageobjects/dynamic.page");
-const AddRemove = require("../pageobjects/addremove.page");
+const LoginPage = require("../../pageobjects/login.page");
+const SecurePage = require("../../pageobjects/secure.page");
+const CheckboxPage = require("../../pageobjects/checkboxes.page");
+const DropdownPage = require("../../pageobjects/dropdown.page");
+const DynamicPage = require("../../pageobjects/dynamic.page");
+const AddRemove = require("../../pageobjects/addremove.page");
 
 describe("My Login application", () => {
   it("should login with valid credentials", async () => {

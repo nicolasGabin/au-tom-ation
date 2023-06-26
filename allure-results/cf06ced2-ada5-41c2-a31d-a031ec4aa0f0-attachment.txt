@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#content.large-centered>div.row>img"
+}
