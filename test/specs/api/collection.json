@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "d81e944c-d8d2-4ea6-851a-705da4568f7e",
+		"name": "Levis-spin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25438259"
+	},
+	"item": [
+		{
+			"name": "playedToday",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User has not played\", function() {",
+							"    pm.response.to.have.status(200);",
+							"}).test(\"Should return user has not played\", function() {",
+							"    pm.response.to.have.jsonBody(\"playedToday\");",
+							"    pm.expect(pm.response.json().playedToday).to.be.false();",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-gateway-key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "x-levis-user",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://stage.prj-2894-levis.jam3.cloud.jam3.net/spinandwin/playedtoday",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"prj-2894-levis",
+						"jam3",
+						"cloud",
+						"jam3",
+						"net"
+					],
+					"path": [
+						"spinandwin",
+						"playedtoday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "spin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-gateway-key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "x-levis-user",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://stage.prj-2894-levis.jam3.cloud.jam3.net/spinandwin/spin",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"prj-2894-levis",
+						"jam3",
+						"cloud",
+						"jam3",
+						"net"
+					],
+					"path": [
+						"spinandwin",
+						"spin"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{basicAuthPass}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "levis-150",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "basicAuthPass",
+			"value": "JTYu564#$52",
+			"type": "string"
+		}
+	]
+}
